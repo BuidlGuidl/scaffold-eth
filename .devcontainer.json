@@ -11,9 +11,10 @@
     "contractshark.solidity-lang@1.3.0"
   ],
   "forwardPorts": [
-    "3000:3000",
-    "8545:8545"
+    "3000",
+    "8545"
   ],
+  "service": "frontend",
   "remoteUser": "node",
   "dockerComposeFile": "docker-compose.yml"
 }
