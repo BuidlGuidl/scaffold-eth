@@ -10,5 +10,6 @@
   ],
   "service": "frontend",
   "remoteUser": "node",
-  "dockerComposeFile": "docker-compose.yml"
+  "dockerComposeFile": "docker-compose.yml",
+  "workspaceFolder": "/home/node/react-app/"
 }
