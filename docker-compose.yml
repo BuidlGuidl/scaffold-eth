@@ -1,0 +1,44 @@
+version: "3.9"
+services:
+  hardhat:
+    build:
+      context: .
+      target: hardhat
+    ports:
+      - "8545:8545"
+    volumes:
+      - shared:/home/node/react-app/src/contracts
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8545" ]
+  hardhat_deploy:
+    build:
+      context: .
+      target: hardhat
+    command: ["yarn", "deploy"]
+    depends_on:
+      hardhat:
+        condition: service_healthy
+    environment:
+      LOCALHOST_RPC_URL: "http://hardhat:8545"
+    volumes:
+      - shared:/home/node/react-app/src/contracts
+    links:
+      - hardhat
+    healthcheck:
+      test: [ "CMD", "ls", "/home/node/react-app/src/contracts/hardhat_contracts.json" ]
+  frontend:
+    build:
+      context: .
+      target: frontend
+    environment:
+      BROWSER: none
+    depends_on:
+      hardhat_deploy:
+        condition: service_healthy
+    ports:
+      - "3000:3000"
+    volumes:
+      - shared:/home/node/react-app/src/contracts
+
+volumes:
+  shared:
