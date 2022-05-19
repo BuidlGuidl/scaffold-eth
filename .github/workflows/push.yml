@@ -40,8 +40,10 @@ jobs:
         with:
           context: "{{defaultContext}}"
           push: false
-          target: react-app.
+          target: react-app
           tags: "${{ steps.meta_react_app.outputs.tags }}"
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
 
 
       - name: "Metadata: hardhat"
