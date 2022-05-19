@@ -8,7 +8,7 @@
     3000,
     8545
   ],
-  "service": "frontend",
+  "service": "react-app",
   "remoteUser": "node",
   "dockerComposeFile": "docker-compose.yml",
   "workspaceFolder": "/home/node/react-app/"
