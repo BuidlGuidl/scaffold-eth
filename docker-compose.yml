@@ -27,6 +27,7 @@ services:
   #   healthcheck:
   #     test: [ "CMD", "ls", "/home/node/react-app/src/contracts/hardhat_contracts.json" ]
   frontend:
+    image: "ghcr.io/buidlguidl/scaffold-eth-react-app:sha-4adc93c"
     build:
       context: .
       target: frontend
