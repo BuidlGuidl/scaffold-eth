@@ -10,7 +10,7 @@ RUN yarn install
 CMD ["yarn", "chain"]
 EXPOSE 8545
 
-FROM base AS frontend
+FROM base AS react-app
 COPY packages/react-app /home/node/react-app
 WORKDIR /home/node/react-app
 RUN yarn install
