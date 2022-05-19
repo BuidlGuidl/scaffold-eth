@@ -40,7 +40,7 @@ jobs:
         with:
           context: "{{defaultContext}}"
           push: false
-          target: frontend
+          target: react-app.
           tags: "${{ steps.meta_react_app.outputs.tags }}"
 
 
