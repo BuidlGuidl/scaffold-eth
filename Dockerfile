@@ -1,18 +1,18 @@
-FROM node:16-alpine3.14 AS base
-RUN apk add git curl
+FROM mcr.microsoft.com/vscode/devcontainers/javascript-node:16-bullseye
 
-FROM base AS hardhat
-COPY packages/hardhat /home/node/hardhat
+#RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
+#    && apt-get -y install --no-install-recommends git curl
+
+#RUN apk add git curl
+#FROM base AS hardhat
+#COPY packages/hardhat /home/node/hardhat
 # Prevent post-deploy error from publish.js. Will be removed once subgraph support is added.
-RUN mkdir -p /home/node/subgraph/config
-WORKDIR /home/node/hardhat
-RUN yarn install
-CMD ["yarn", "chain"]
-EXPOSE 8545
+#RUN mkdir -p /home/node/subgraph/config
+WORKDIR /workspaces/scaffold-eth
+ADD package.json ./
+ADD packages ./packages
+RUN cd packages/hardhat && yarn install
+RUN cd packages/react-app && yarn install
 
-FROM base AS react-app
-COPY packages/react-app /home/node/react-app
-WORKDIR /home/node/react-app
-RUN yarn install
-CMD ["yarn", "start"]
+EXPOSE 8545
 EXPOSE 3000

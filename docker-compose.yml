@@ -27,10 +27,9 @@ services:
   #   healthcheck:
   #     test: [ "CMD", "ls", "/home/node/react-app/src/contracts/hardhat_contracts.json" ]
   react-app:
-    image: "ghcr.io/buidlguidl/scaffold-eth-react-app:sha-c85729f"
-#    build:
-#      context: .
-#      target: react-app
+#    image: "ghcr.io/buidlguidl/scaffold-eth-react-app:sha-c85729f"
+    build:
+      context: .
     environment:
       BROWSER: none
     # depends_on:

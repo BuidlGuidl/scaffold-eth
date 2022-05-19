@@ -1,4 +1,4 @@
-name: Create and publish Docker images
+name: Create and publish Docker image
 
 on:
   push:
@@ -34,38 +34,18 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: "Metadata: react-app"
-        id: meta_react_app
+      - name: Metadata
+        id: meta
         uses: docker/metadata-action@98669ae865ea3cffbcbaa878cf57c20bbf1c6c38
         with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}-react-app
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
             type=sha
-      - name: "Build and push: react-app"
+      - name: Build and push
         uses: docker/build-push-action@v2
         with:
           context: "{{defaultContext}}"
           push: true
-          target: react-app
-          tags: "${{ steps.meta_react_app.outputs.tags }}"
+          tags: "${{ steps.meta.outputs.tags }}"
           cache-from: type=gha
           cache-to: type=gha,mode=max
-
-
-      - name: "Metadata: hardhat"
-        id: meta_hardhat
-        uses: docker/metadata-action@98669ae865ea3cffbcbaa878cf57c20bbf1c6c38
-        with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}-hardhat
-          tags: |
-            type=sha
-      - name: "Build and push: hardhat"
-        uses: docker/build-push-action@v2
-        with:
-          context: "{{defaultContext}}"
-          push: true
-          target: hardhat
-          tags: "${{ steps.meta_hardhat.outputs.tags }}"
-
-
-
