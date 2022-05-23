@@ -13,6 +13,9 @@
       "onAutoForward": "openBrowserOnce"
     }
   },
+  "hostRequirements": {
+    "memory": "6gb"
+  },
   "remoteUser": "node",
   "image": "ghcr.io/buidlguidl/scaffold-eth:sha-7f7803d"
 }
