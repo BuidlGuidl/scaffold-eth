@@ -4,12 +4,16 @@
     "dbaeumer.vscode-eslint",
     "contractshark.solidity-lang@1.3.0"
   ],
+  "forwardPorts": [
+    3000
+  ],
   "hostRequirements": {
     "memory": "8gb"
   },
-  "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:16-bullseye",
+  "remoteUser": "node",
+  "image": "ghcr.io/buidlguidl/scaffold-eth:sha-e635100",
   "containerEnv": {
-    "REACT_APP_CODESPACES": "true"
- },
-  "postCreateCommand": "yarn install && npx browserslist@latest --update-db"
+     "REACT_APP_CODESPACES": "true"
+  },
+  "postCreateCommand": "cp /workspaces/scaffold-eth-tmp/node_modules /workspaces/scaffold-eth/node_modules && yarn install"
 }
