@@ -5,7 +5,8 @@
     "contractshark.solidity-lang@1.3.0"
   ],
   "forwardPorts": [
-    3000
+    3000,
+    8545
   ],
   "portsAttributes": {
     "3000": {
@@ -14,5 +15,7 @@
     }
   },
   "remoteUser": "node",
-  "image": "ghcr.io/buidlguidl/scaffold-eth:sha-7f7803d"
+  "build": {
+    "dockerfile": "Dockerfile"
+  }
 }
