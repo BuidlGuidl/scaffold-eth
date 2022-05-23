@@ -13,6 +13,7 @@ ADD package.json ./
 ADD packages ./packages
 RUN cd packages/hardhat && yarn install
 RUN cd packages/react-app && yarn install
+RUN npx browserslist@latest --update-db
 
 EXPOSE 8545
 EXPOSE 3000
