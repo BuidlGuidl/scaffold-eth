@@ -10,8 +10,10 @@
   "hostRequirements": {
     "memory": "8gb"
   },
-  "build": {
-    "dockerfile": "Dockerfile"
-  },
-  "postCreateCommand": "yarn install"
+  "remoteUser": "node",
+  "image": "ghcr.io/buidlguidl/scaffold-eth:sha-e635100",
+  "containerEnv": {
+     "REACT_APP_CODESPACES": "true"
+    },
+    "postCreateCommand": "yarn install"
 }
