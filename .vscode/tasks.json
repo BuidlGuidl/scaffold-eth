@@ -2,43 +2,49 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "start",
-            "type": "shell",
-            "command": "yarn start",
-            "group": "none",
+            "type": "npm",
+            "script": "start",
+            "problemMatcher": [],
+            "label": "npm: start",
+            "detail": "yarn workspace @scaffold-eth/react-app start",
             "presentation": {
                 "reveal": "always",
                 "panel": "shared"
             },
             "runOptions": {
                 "runOn": "folderOpen"
-            }
+            },
+            "group": "none"
         },
         {
-            "label": "chain",
-            "type": "shell",
-            "command": "yarn chain",
-            "group": "none",
+            "type": "npm",
+            "script": "chain",
+            "problemMatcher": [],
+            "label": "npm: chain",
+            "detail": "yarn workspace @scaffold-eth/hardhat chain",
             "presentation": {
                 "reveal": "always",
                 "panel": "shared"
             },
             "runOptions": {
                 "runOn": "folderOpen"
-            }
+            },
+            "group": "none"
         },
         {
-            "label": "deploy",
-            "type": "shell",
-            "command": "yarn deploy",
-            "group": "none",
+            "type": "npm",
+            "script": "deploy",
+            "problemMatcher": [],
+            "label": "npm: deploy",
+            "detail": "yarn workspace @scaffold-eth/hardhat deploy",
             "presentation": {
                 "reveal": "always",
                 "panel": "shared"
             },
             "runOptions": {
                 "runOn": "folderOpen"
-            }
+            },
+            "group": "none"
         }
     ]
 }
