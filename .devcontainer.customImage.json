@@ -14,6 +14,6 @@
   "image": "ghcr.io/buidlguidl/scaffold-eth:sha-e635100",
   "containerEnv": {
      "REACT_APP_CODESPACES": "true"
-    },
-    "postCreateCommand": "yarn install"
+  },
+  "postCreateCommand": "yarn install"
 }
