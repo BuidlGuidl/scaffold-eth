@@ -8,12 +8,12 @@
     3000
   ],
   "hostRequirements": {
-    "memory": "4gb"
+    "memory": "8gb"
   },
   "remoteUser": "node",
   "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:16-bullseye",
   "containerEnv": {
      "REACT_APP_CODESPACES": "true"
   },
-  "onCreateCommand": "yarn install"
+  "onCreateCommand": "yarn install && yarn browserslist --update-db"
 }
