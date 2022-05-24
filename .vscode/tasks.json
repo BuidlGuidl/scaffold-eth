@@ -40,7 +40,7 @@
                 },
                 "background": {
                     "activeOnStart": false,
-                    "beginsPatter": "^.*$",
+                    "beginsPattern": "^.*$",
                     "endsPattern": "^Started HTTP and WebSocket JSON-RPC server at .*"
                 }
             }
@@ -60,7 +60,6 @@
             },
             "group": "none",
             "dependsOn": ["yarn: chain"],
-            
         }
     ]
 }
