@@ -8,7 +8,7 @@
     3000
   ],
   "hostRequirements": {
-    "memory": "8gb"
+    "memory": "4gb"
   },
   "remoteUser": "node",
   "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:16-bullseye",
