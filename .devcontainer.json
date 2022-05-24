@@ -11,9 +11,9 @@
     "memory": "8gb"
   },
   "remoteUser": "node",
-  "image": "ghcr.io/buidlguidl/scaffold-eth:sha-efc3759",
+  "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:16-bullseye",
   "containerEnv": {
      "REACT_APP_CODESPACES": "true"
   },
-  "onCreateCommand": "cp -r /workspaces-tmp/scaffold-eth/node_modules /workspaces/scaffold-eth/node_modules && yarn install"
+  "onCreateCommand": "yarn install"
 }
