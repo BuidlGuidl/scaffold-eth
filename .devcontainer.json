@@ -15,5 +15,5 @@
   "containerEnv": {
      "REACT_APP_CODESPACES": "true"
   },
-  "postCreateCommand": "cp -r /workspaces-tmp/scaffold-eth/node_modules /workspaces/scaffold-eth/node_modules && yarn install"
+  "onCreateCommand": "cp -r /workspaces-tmp/scaffold-eth/node_modules /workspaces/scaffold-eth/node_modules && yarn install"
 }
