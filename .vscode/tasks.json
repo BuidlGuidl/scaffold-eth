@@ -47,10 +47,10 @@
         },
         {
             "type": "npm",
-            "script": "deploy",
+            "script": "watch",
             "problemMatcher": [],
             "label": "yarn: deploy",
-            "detail": "yarn workspace @scaffold-eth/hardhat deploy",
+            "detail": "yarn workspace @scaffold-eth/hardhat watch",
             "presentation": {
                 "reveal": "always",
                 "panel": "shared"
