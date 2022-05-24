@@ -16,7 +16,7 @@
                 "runOn": "folderOpen"
             },
             "group": "none",
-            "dependsOn": ["yarn: deploy "]
+            "dependsOn": ["yarn: deploy"]
         },
         {
             "type": "npm",
