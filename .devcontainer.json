@@ -11,7 +11,7 @@
     "memory": "8gb"
   },
   "remoteUser": "node",
-  "image": "ghcr.io/buidlguidl/scaffold-eth:sha-8b1df6a",
+  "image": "ghcr.io/buidlguidl/scaffold-eth:sha-87944a8",
   "containerEnv": {
      "REACT_APP_CODESPACES": "true"
   },
